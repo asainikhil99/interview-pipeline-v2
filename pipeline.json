@@ -1,0 +1,13 @@
+[
+  {
+    "id": "1",
+    "company": "Acme Corp",
+    "role": "Software Engineer",
+    "recruiter": "Jane Smith",
+    "status": "Applied",
+    "stage": "Application",
+    "nextStep": "Wait for response",
+    "date": "2026-05-02",
+    "notes": "Example entry"
+  }
+]
