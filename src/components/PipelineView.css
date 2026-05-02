@@ -1,0 +1,36 @@
+.pipeline-view {
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.pipeline-view__json {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
+.pipeline-view__status {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #57606a;
+  font-size: 1rem;
+}
+
+.pipeline-view__error {
+  color: #cf222e;
+  margin-bottom: 1rem;
+}
+
+.pipeline-view__retry {
+  min-height: 44px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
