@@ -1,0 +1,87 @@
+.token-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.token-gate__card {
+  width: 100%;
+  max-width: 480px;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.token-gate__card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+}
+
+.token-gate__card p {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.token-gate__link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #0969da;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.token-gate__link:hover {
+  text-decoration: underline;
+}
+
+.token-gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.token-gate__form input[type='password'] {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.token-gate__form input[type='password']:disabled {
+  background: #f5f5f5;
+}
+
+.token-gate__form button {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #1a7f37;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.token-gate__form button:disabled {
+  background: #94d3a2;
+  cursor: not-allowed;
+}
+
+.token-gate__error {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cf222e;
+}
