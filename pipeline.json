@@ -1,13 +1,79 @@
 [
   {
     "id": "1",
-    "company": "Acme Corp",
-    "role": "Software Engineer",
-    "recruiter": "Jane Smith",
-    "status": "Applied",
-    "stage": "Application",
-    "nextStep": "Wait for response",
-    "date": "2026-05-02",
-    "notes": "Example entry"
+    "company": "Best Buy",
+    "role": "Applied ML Engineer",
+    "recruiter": "Deb Schuenke",
+    "status": "Screen Done",
+    "stage": "Phone Screen",
+    "nextStep": "Awaiting feedback",
+    "date": "2026-05-01",
+    "notes": "Phone interview via MS Teams, camera required, no AI tools"
+  },
+  {
+    "id": "2",
+    "company": "Elysian Staffing",
+    "role": "Applied AI Engineer (contract)",
+    "recruiter": "Tiffany Jordan",
+    "status": "Interview Done",
+    "stage": "Client Interview",
+    "nextStep": "Awaiting client decision",
+    "date": "2026-05-01",
+    "notes": "Likely Samsung, Englewood Cliffs NJ"
+  },
+  {
+    "id": "3",
+    "company": "Google",
+    "role": "Senior ML Engineer",
+    "recruiter": "Jim Joseph",
+    "status": "Interview Scheduled",
+    "stage": "Round 1 (Virtual)",
+    "nextStep": "Round 1 virtual interview",
+    "date": "2026-05-05",
+    "notes": "1 PM EST"
+  },
+  {
+    "id": "4",
+    "company": "Capital One",
+    "role": "Senior ML Engineer",
+    "recruiter": "Daniel",
+    "status": "Screen Scheduled",
+    "stage": "Recruiter Call",
+    "nextStep": "Phone call with Daniel",
+    "date": "2026-05-18",
+    "notes": "11:40 AM"
+  },
+  {
+    "id": "5",
+    "company": "Freenome",
+    "role": "Senior ML Engineer",
+    "recruiter": "Jairo",
+    "status": "Screen Done",
+    "stage": "Recruiter Screen",
+    "nextStep": "Follow up with Jairo",
+    "date": "2026-04-25",
+    "notes": "Bay Area role"
+  },
+  {
+    "id": "6",
+    "company": "Fireworks AI",
+    "role": "Solutions Engineer",
+    "recruiter": "",
+    "status": "Interview Done",
+    "stage": "Take-home assessment",
+    "nextStep": "Awaiting follow-up",
+    "date": "2026-04-20",
+    "notes": "Scored 10/10 on take-home"
+  },
+  {
+    "id": "7",
+    "company": "Intuit",
+    "role": "ML Engineer",
+    "recruiter": "",
+    "status": "Rejected",
+    "stage": "Closed",
+    "nextStep": "",
+    "date": "2026-04-15",
+    "notes": ""
   }
 ]
