@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getPipelineFile } from '../api/github';
 import { OWNER, REPO, PIPELINE_PATH } from '../utils/config';
+import KanbanBoard from './KanbanBoard';
 import './PipelineView.css';
 
 export default function PipelineView({ token }) {
@@ -36,7 +37,7 @@ export default function PipelineView({ token }) {
 
   return (
     <div className="pipeline-view">
-      <pre className="pipeline-view__json">{JSON.stringify(data, null, 2)}</pre>
+      <KanbanBoard entries={data} />
     </div>
   );
 }

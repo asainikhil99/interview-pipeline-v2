@@ -39,10 +39,18 @@ board for tracking interview stages across companies.
 Each entry: { id, company, role, recruiter, status, stage, nextStep, date, notes }
 Statuses map to lanes:
 
-- "Applied", "Screen Scheduled", "Screen Done" → Early
-- "Interview Scheduled", "Interview Done", "Onsite", "Final Round" → Active
-- "Offer", "Accepted" → Won
-- "Rejected", "Not Moving Forward", "Closed", "Withdrawn" → Closed
+- "Screen Scheduled", "Screen Done" → Recruiter Screening
+- "Interview Scheduled", "Interview Done", "Onsite", "Final Round" → Interview
+- "Offer", "Accepted", "Rejected", "Not Moving Forward", "Closed", "Withdrawn" → Rejected/Accepted
+- "Applied" is not tracked — tracking starts when a recruiter engages
+- Unknown statuses are hidden (not misfiled into a fallback lane)
+
+## Card display fields
+
+Cards show three fields only: company (bold), recruiter, next event date.
+Date label is "Next:" and formatted as "Mon, May 5" (year appended only when
+it differs from the current year). Sort order within each lane: ascending by
+date (soonest first); entries with missing/invalid dates sort to the bottom.
 
 ## Critical gotchas (lessons from v1)
 
