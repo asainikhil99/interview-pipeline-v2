@@ -1,26 +1,15 @@
 .pipeline-view {
-  padding: 1rem;
-  max-width: 100%;
-}
-
-.pipeline-view__json {
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
-  border-radius: 6px;
-  padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
-  margin: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .pipeline-view__status {
   padding: 2rem 1rem;
   text-align: center;
-  color: #57606a;
-  font-size: 1rem;
+  color: var(--text-secondary);
+  font-size: 14px;
 }
 
 .pipeline-view__error {
@@ -31,6 +20,12 @@
 .pipeline-view__retry {
   min-height: 44px;
   padding: 0 1rem;
-  font-size: 1rem;
+  font-size: 14px;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .pipeline-view {
+    padding: 16px;
+  }
 }

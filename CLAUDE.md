@@ -72,3 +72,34 @@ date (soonest first); entries with missing/invalid dates sort to the bottom.
 - Plain CSS in component-level .css files
 - Keep components small, one per file
 - No TypeScript for this project (keep it light)
+
+## Design system
+
+### Typography
+- UI font: `Geist` weights 400, 500, 600 — loaded from Google Fonts in `public/index.html`
+- Monospace (dates only): `Geist Mono` weight 500
+- Base font size: 14px on `body`; inputs stay 16px to prevent iOS auto-zoom
+- Do NOT use Inter, Roboto, system-ui, or Arial
+
+### Color tokens (CSS custom properties on `:root` in `src/index.css`)
+| Token | Value | Use |
+|---|---|---|
+| `--bg` | `#fafafa` | Page background |
+| `--surface` | `#ffffff` | Cards, lanes, header |
+| `--border` | `#e5e5e5` | All 1px hairline borders |
+| `--text-primary` | `#0a0a0a` | Headings, company names |
+| `--text-secondary` | `#737373` | Recruiter, counts, secondary labels |
+| `--text-tertiary` | `#a3a3a3` | Empty state, placeholders |
+| `--accent` | `#2563eb` | Single use: links in TokenGate |
+| `--urgent-bg` | `#fef3c7` | Date pill: 2–7 days away (amber) |
+| `--today-bg` | `#fee2e2` | Date pill: today or tomorrow (red) |
+
+### Date urgency (see `src/utils/dateLabel.js`)
+- **today/tomorrow** → pill bg `--today-bg`, text `#991b1b`, label "Today" / "Tomorrow"
+- **2–7 days** → pill bg `--urgent-bg`, text `#92400e`, label "In N days · Mon, May 5"
+- **8+ days or past** → pill bg `#f5f5f5`, text `--text-secondary`, label "Mon, May 5"
+
+### Layout
+- Container: `max-width: 1280px`, centered, `padding: 24px` (16px on mobile)
+- Lane gap: 24px; card gap within lane: 8px
+- No colored lane header bars — lane name is uppercase 13px text with hairline border-bottom

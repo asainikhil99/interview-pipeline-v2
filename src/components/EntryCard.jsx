@@ -1,33 +1,19 @@
+import { dateLabel } from '../utils/dateLabel';
 import './EntryCard.css';
 
-function formatDate(dateStr) {
-  if (!dateStr) return null;
-  const parts = dateStr.split('-').map(Number);
-  if (parts.length !== 3 || parts.some(isNaN)) return dateStr;
-  const [year, month, day] = parts;
-  const d = new Date(year, month - 1, day);
-  const opts = { weekday: 'short', month: 'short', day: 'numeric' };
-  if (year !== new Date().getFullYear()) opts.year = 'numeric';
-  return d.toLocaleDateString('en-US', opts);
-}
-
 export default function EntryCard({ entry }) {
-  const formatted = formatDate(entry.date);
+  const dl = dateLabel(entry.date);
 
   return (
     <div className="entry-card">
       <div className="entry-card__company">{entry.company}</div>
       <div className="entry-card__fields">
         {entry.recruiter && (
-          <div className="entry-card__field">
-            <span className="entry-card__label">Recruiter</span>
-            <span>{entry.recruiter}</span>
-          </div>
+          <div className="entry-card__recruiter">&bull; {entry.recruiter}</div>
         )}
-        {formatted && (
-          <div className="entry-card__field">
-            <span className="entry-card__label">Next</span>
-            <span>{formatted}</span>
+        {dl && (
+          <div className={`entry-card__date-pill entry-card__date-pill--${dl.urgency}`}>
+            {dl.label}
           </div>
         )}
       </div>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { TOKEN_KEY } from './api/github';
 import TokenGate from './components/TokenGate';
 import PipelineView from './components/PipelineView';
+import './App.css';
 
 function App() {
   const [token, setToken] = useState(() => localStorage.getItem(TOKEN_KEY));
@@ -10,11 +11,11 @@ function App() {
 
   return (
     <div>
-      <header style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem' }}>
-        <h1 style={{ margin: 0, flex: 1 }}>Interview Pipeline</h1>
+      <header className="app-header">
+        <h1 className="app-header__title">Interview Pipeline</h1>
         <button
+          className="app-header__signout"
           onClick={() => { localStorage.removeItem(TOKEN_KEY); setToken(null); }}
-          style={{ minHeight: '44px', padding: '0 1rem', fontSize: '1rem', cursor: 'pointer' }}
         >
           Sign out
         </button>

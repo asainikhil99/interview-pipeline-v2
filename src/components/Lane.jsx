@@ -1,13 +1,10 @@
-import { LANE_COLORS } from '../utils/lanes';
 import EntryCard from './EntryCard';
 import './Lane.css';
 
 export default function Lane({ name, entries }) {
-  const headerColor = LANE_COLORS[name];
-
   return (
     <div className="lane">
-      <div className="lane__header" style={{ backgroundColor: headerColor }}>
+      <div className="lane__header">
         <span className="lane__name">{name}</span>
         <span className="lane__count">{entries.length}</span>
       </div>

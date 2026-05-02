@@ -5,35 +5,39 @@
   justify-content: center;
   padding: 1rem;
   box-sizing: border-box;
+  background: var(--bg);
 }
 
 .token-gate__card {
   width: 100%;
-  max-width: 480px;
+  max-width: 400px;
   padding: 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background: #fff;
+  background: var(--surface);
   box-sizing: border-box;
 }
 
 .token-gate__card h2 {
   margin: 0 0 0.75rem;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
 }
 
 .token-gate__card p {
   margin: 0 0 0.75rem;
-  font-size: 1rem;
+  font-size: 14px;
   line-height: 1.5;
-  color: #444;
+  color: var(--text-secondary);
 }
 
 .token-gate__link {
   display: inline-block;
   margin-bottom: 1.25rem;
-  color: #0969da;
-  font-size: 0.95rem;
+  color: var(--accent);
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -51,10 +55,12 @@
   width: 100%;
   min-height: 44px;
   padding: 0 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
+  font-size: 16px;
+  border: 1px solid var(--border);
   border-radius: 6px;
   box-sizing: border-box;
+  font-family: inherit;
+  color: var(--text-primary);
 }
 
 .token-gate__form input[type='password']:disabled {
@@ -65,23 +71,24 @@
   width: 100%;
   min-height: 44px;
   padding: 0 1rem;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 600;
-  background: #1a7f37;
-  color: #fff;
+  background: var(--text-primary);
+  color: #ffffff;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 .token-gate__form button:disabled {
-  background: #94d3a2;
+  background: var(--text-tertiary);
   cursor: not-allowed;
 }
 
 .token-gate__error {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 13px;
   color: #cf222e;
 }
