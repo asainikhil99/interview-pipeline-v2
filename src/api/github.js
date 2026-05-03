@@ -35,3 +35,26 @@ export async function getPipelineFile(token, owner, repo, path) {
   }
   return { content: parsed, sha: data.sha };
 }
+
+export async function updatePipelineFile(token, owner, repo, path, content, sha, message) {
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, {
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      message,
+      content: btoa(JSON.stringify(content, null, 2)),
+      sha,
+    }),
+  });
+  if (res.status === 409) {
+    const err = new Error('Conflict');
+    err.code = 'CONFLICT';
+    throw err;
+  }
+  if (!res.ok) throw new Error(`GitHub PUT failed: ${res.status}`);
+  const json = await res.json();
+  return json.content.sha;
+}

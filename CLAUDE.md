@@ -1,4 +1,20 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Interview Pipeline Dashboard
+
+## Commands
+
+```bash
+npm start          # dev server at localhost:3000
+npm run build      # production build into build/
+npm test           # run tests in watch mode
+npm test -- --watchAll=false  # run tests once (CI mode)
+npm run deploy     # build + push to gh-pages branch (deploys to GitHub Pages)
+```
+
+ESLint runs automatically as part of `build` and `start` (CRA default — no separate lint script).
 
 ## What this is
 
