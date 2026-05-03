@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/interview-pipeline-v2/static/css/main.f43182d9.css",
+    "main.js": "/interview-pipeline-v2/static/js/main.7ccf6edc.js",
+    "index.html": "/interview-pipeline-v2/index.html",
+    "main.f43182d9.css.map": "/interview-pipeline-v2/static/css/main.f43182d9.css.map",
+    "main.7ccf6edc.js.map": "/interview-pipeline-v2/static/js/main.7ccf6edc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f43182d9.css",
+    "static/js/main.7ccf6edc.js"
+  ]
+}
