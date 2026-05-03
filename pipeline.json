@@ -119,5 +119,16 @@
     "nextStep": "",
     "date": "2026-05-06",
     "notes": "12:30 PM to 1:00 PM"
+  },
+  {
+    "id": "entry_1777850097240_7z2oh",
+    "company": "Bofa",
+    "role": "Senior Python Developer",
+    "recruiter": "Kimberly",
+    "status": "Interview Scheduled",
+    "stage": "Client Interview",
+    "nextStep": "",
+    "date": "2026-05-07",
+    "notes": "3:00 PM t0 4:00 PM"
   }
 ]
