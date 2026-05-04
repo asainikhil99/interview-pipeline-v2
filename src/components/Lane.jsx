@@ -1,7 +1,7 @@
 import EntryCard from './EntryCard';
 import './Lane.css';
 
-export default function Lane({ name, entries }) {
+export default function Lane({ name, entries, onCardClick }) {
   return (
     <div className="lane">
       <div className="lane__header">
@@ -12,7 +12,7 @@ export default function Lane({ name, entries }) {
         {entries.length === 0 ? (
           <p className="lane__empty">No entries</p>
         ) : (
-          entries.map(entry => <EntryCard key={entry.id} entry={entry} />)
+          entries.map(entry => <EntryCard key={entry.id} entry={entry} onClick={() => onCardClick(entry)} />)
         )}
       </div>
     </div>

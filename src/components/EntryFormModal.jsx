@@ -4,17 +4,22 @@ import './EntryFormModal.css';
 
 const EMPTY = { company: '', role: '', recruiter: '', status: '', stage: '', nextStep: '', date: '', notes: '' };
 
-export default function EntryFormModal({ isOpen, onClose, onSubmit, isSaving, error }) {
+export default function EntryFormModal({ isOpen, onClose, onSubmit, isSaving, error, mode = 'create', initialValues = null }) {
   const [values, setValues] = useState(EMPTY);
   const backdropRef = useRef(null);
 
   useEffect(() => {
     if (!isOpen) return;
-    setValues(EMPTY);
+    setValues(mode === 'edit' && initialValues ? { ...EMPTY, ...initialValues } : EMPTY);
     function onKey(e) { if (e.key === 'Escape') onClose(); }
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (!isOpen || mode !== 'edit' || !initialValues) return;
+    setValues({ ...EMPTY, ...initialValues });
+  }, [initialValues]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (isOpen) {
@@ -40,7 +45,8 @@ export default function EntryFormModal({ isOpen, onClose, onSubmit, isSaving, er
   function handleSubmit(e) {
     e.preventDefault();
     if (!canSubmit) return;
-    onSubmit({ ...values });
+    const { id: _id, ...formValues } = values;
+    onSubmit(formValues);
   }
 
   return (
@@ -49,7 +55,7 @@ export default function EntryFormModal({ isOpen, onClose, onSubmit, isSaving, er
         <button className="modal__close" onClick={onClose} aria-label="Close" disabled={isSaving}>
           ×
         </button>
-        <h2 className="modal__title" id="modal-title">Add entry</h2>
+        <h2 className="modal__title" id="modal-title">{mode === 'edit' ? 'Edit entry' : 'Add entry'}</h2>
 
         {error && <p className="modal__error">{error}</p>}
 
@@ -104,7 +110,7 @@ export default function EntryFormModal({ isOpen, onClose, onSubmit, isSaving, er
               Cancel
             </button>
             <button type="submit" className="btn-primary" disabled={!canSubmit}>
-              {isSaving ? 'Saving…' : 'Add entry'}
+              {isSaving ? 'Saving…' : mode === 'edit' ? 'Save changes' : 'Add entry'}
             </button>
           </div>
         </form>

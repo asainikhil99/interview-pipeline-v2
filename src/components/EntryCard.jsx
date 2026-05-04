@@ -1,11 +1,11 @@
 import { dateLabel } from '../utils/dateLabel';
 import './EntryCard.css';
 
-export default function EntryCard({ entry }) {
+export default function EntryCard({ entry, onClick }) {
   const dl = dateLabel(entry.date);
 
   return (
-    <div className="entry-card">
+    <button className="entry-card" onClick={onClick}>
       <div className="entry-card__company">{entry.company}</div>
       <div className="entry-card__fields">
         {entry.recruiter && (
@@ -17,6 +17,6 @@ export default function EntryCard({ entry }) {
           </div>
         )}
       </div>
-    </div>
+    </button>
   );
 }

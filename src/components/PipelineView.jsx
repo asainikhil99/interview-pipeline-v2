@@ -15,6 +15,7 @@ export default function PipelineView({ token }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [modalError, setModalError] = useState('');
+  const [editingEntry, setEditingEntry] = useState(null);
 
   async function fetchPipeline() {
     setLoading(true);
@@ -60,6 +61,31 @@ export default function PipelineView({ token }) {
     }
   }
 
+  async function handleEditEntry(formValues) {
+    const prevData = data;
+    const updated = data.map(e => e.id === editingEntry.id ? { ...e, ...formValues } : e);
+    setData(updated);
+    setIsSaving(true);
+    try {
+      const newSha = await updatePipelineFile(
+        token, OWNER, REPO, PIPELINE_PATH,
+        updated, sha, `Edit entry: ${formValues.company}`
+      );
+      setSha(newSha);
+      setEditingEntry(null);
+    } catch (err) {
+      setData(prevData);
+      if (err.code === 'CONFLICT') {
+        setModalError('Pipeline changed elsewhere. Refresh and try again.');
+        fetchPipeline();
+      } else {
+        setModalError(err.message);
+      }
+    } finally {
+      setIsSaving(false);
+    }
+  }
+
   if (loading) return <p className="pipeline-view__status">Loading pipeline…</p>;
 
   if (error) return (
@@ -74,18 +100,20 @@ export default function PipelineView({ token }) {
       <div className="pipeline-view__toolbar">
         <button
           className="pipeline-view__add-btn"
-          onClick={() => { setModalError(''); setIsModalOpen(true); }}
+          onClick={() => { setModalError(''); setEditingEntry(null); setIsModalOpen(true); }}
         >
           Add entry
         </button>
       </div>
-      <KanbanBoard entries={data} />
+      <KanbanBoard entries={data} onCardClick={(entry) => { setModalError(''); setEditingEntry(entry); }} />
       <EntryFormModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSubmit={handleAddEntry}
+        isOpen={isModalOpen || editingEntry !== null}
+        onClose={() => { setIsModalOpen(false); setEditingEntry(null); setModalError(''); }}
+        onSubmit={editingEntry ? handleEditEntry : handleAddEntry}
         isSaving={isSaving}
         error={modalError}
+        mode={editingEntry ? 'edit' : 'create'}
+        initialValues={editingEntry}
       />
     </div>
   );

@@ -3,8 +3,13 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 14px 16px;
-  cursor: default;
+  cursor: pointer;
   transition: border-color 0.15s;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  display: block;
 }
 
 .entry-card:hover {
