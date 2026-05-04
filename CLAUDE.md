@@ -119,3 +119,13 @@ date (soonest first); entries with missing/invalid dates sort to the bottom.
 - Container: `max-width: 1280px`, centered, `padding: 24px` (16px on mobile)
 - Lane gap: 24px; card gap within lane: 8px
 - No colored lane header bars — lane name is uppercase 13px text with hairline border-bottom
+
+## AI Assistant
+
+- Profile lives in `src/config/profile.js` — exported as `PROFILE` object
+- Groq key stored in localStorage under `'groq_api_key'` (see `src/api/groq.js`)
+- Model: `llama-3.3-70b-versatile` (Groq)
+- System prompt built by `buildSystemPrompt(profile)` in `src/utils/systemPrompt.js`
+- Phase A: foundation chat with profile in system prompt only
+- Phase B (TODO): inject pipelineData into system prompt for opportunity ranking
+- Never put API keys, salary figures, or contact info in `profile.js` — those are excluded for privacy

@@ -1,0 +1,77 @@
+.groq-gate {
+  padding: 2rem;
+}
+
+.groq-gate__title {
+  margin: 0 0 0.5rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.groq-gate__desc {
+  margin: 0 0 0.75rem;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.groq-gate__link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: var(--accent);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.groq-gate__link:hover {
+  text-decoration: underline;
+}
+
+.groq-gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.groq-gate__form input[type='password'] {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: var(--text-primary);
+}
+
+.groq-gate__form input[type='password']:disabled {
+  background: #f5f5f5;
+}
+
+.groq-gate__form button {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--text-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.groq-gate__form button:disabled {
+  background: var(--text-tertiary);
+  cursor: not-allowed;
+}
+
+.groq-gate__error {
+  margin: 0;
+  font-size: 13px;
+  color: #cf222e;
+}
