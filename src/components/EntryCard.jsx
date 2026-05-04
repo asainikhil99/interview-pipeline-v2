@@ -1,8 +1,10 @@
 import { dateLabel } from '../utils/dateLabel';
+import { getOutcome } from '../utils/lanes';
 import './EntryCard.css';
 
 export default function EntryCard({ entry, onClick }) {
   const dl = dateLabel(entry.date);
+  const outcome = getOutcome(entry.status);
 
   return (
     <button className="entry-card" onClick={onClick}>
@@ -15,6 +17,11 @@ export default function EntryCard({ entry, onClick }) {
           <div className={`entry-card__date-pill entry-card__date-pill--${dl.urgency}`}>
             {dl.label}
           </div>
+        )}
+        {outcome && (
+          <span className={`entry-card__outcome entry-card__outcome--${outcome}`}>
+            {outcome === 'accepted' ? 'ACCEPTED' : 'REJECTED'}
+          </span>
         )}
       </div>
     </button>

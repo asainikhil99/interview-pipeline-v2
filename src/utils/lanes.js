@@ -55,3 +55,14 @@ export function groupByLane(entries) {
   groups['Rejected/Accepted']   = sortByDateAsc(groups['Rejected/Accepted']);
   return groups;
 }
+
+export function getOutcome(status) {
+  if (status === 'Offer' || status === 'Accepted') return 'accepted';
+  if (
+    status === 'Rejected' ||
+    status === 'Not Moving Forward' ||
+    status === 'Closed' ||
+    status === 'Withdrawn'
+  ) return 'rejected';
+  return null;
+}

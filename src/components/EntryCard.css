@@ -59,3 +59,24 @@
   background: #f5f5f5;
   color: var(--text-secondary);
 }
+
+.entry-card__outcome {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-family: 'Geist Mono', monospace;
+  width: fit-content;
+}
+
+.entry-card__outcome--accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.entry-card__outcome--rejected {
+  background: #f5f5f5;
+  color: #737373;
+}
