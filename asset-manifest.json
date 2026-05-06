@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/interview-pipeline-v2/static/css/main.d50f2240.css",
-    "main.js": "/interview-pipeline-v2/static/js/main.9dad0d00.js",
+    "main.css": "/interview-pipeline-v2/static/css/main.2c1bf724.css",
+    "main.js": "/interview-pipeline-v2/static/js/main.e1b07d98.js",
     "index.html": "/interview-pipeline-v2/index.html",
-    "main.d50f2240.css.map": "/interview-pipeline-v2/static/css/main.d50f2240.css.map",
-    "main.9dad0d00.js.map": "/interview-pipeline-v2/static/js/main.9dad0d00.js.map"
+    "main.2c1bf724.css.map": "/interview-pipeline-v2/static/css/main.2c1bf724.css.map",
+    "main.e1b07d98.js.map": "/interview-pipeline-v2/static/js/main.e1b07d98.js.map"
   },
   "entrypoints": [
-    "static/css/main.d50f2240.css",
-    "static/js/main.9dad0d00.js"
+    "static/css/main.2c1bf724.css",
+    "static/js/main.e1b07d98.js"
   ]
 }
