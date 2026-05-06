@@ -166,5 +166,17 @@
     "date": "2026-05-08",
     "time": "14:15",
     "notes": "Screening schedule(phone screen)"
+  },
+  {
+    "id": "entry_1778094608414_er8gk",
+    "company": "Ramp ",
+    "role": "Software engineering ",
+    "recruiter": "",
+    "status": "Assessment",
+    "stage": "",
+    "nextStep": "",
+    "date": "2026-05-10",
+    "time": "12:10",
+    "notes": ""
   }
 ]
