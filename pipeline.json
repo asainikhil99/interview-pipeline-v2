@@ -184,5 +184,17 @@
     "date": "2026-05-10",
     "time": "12:10",
     "notes": ""
+  },
+  {
+    "id": "entry_1778210134949_5kfqh",
+    "company": "verneek",
+    "role": "ML Engineer",
+    "recruiter": "Lisa",
+    "status": "Screen Scheduled",
+    "stage": "",
+    "nextStep": "",
+    "date": "2026-05-12",
+    "time": "11:00",
+    "notes": ""
   }
 ]
