@@ -208,5 +208,17 @@
     "date": "2026-05-19",
     "time": "13:00",
     "notes": "1 : 00 PM to 1 : 15 PM"
+  },
+  {
+    "id": "entry_1778215769770_n58ux",
+    "company": "Microsoft",
+    "role": "AI Engineer role",
+    "recruiter": "Katherine",
+    "status": "Screen Scheduled",
+    "stage": "",
+    "nextStep": "",
+    "date": "",
+    "time": "",
+    "notes": ""
   }
 ]
