@@ -233,5 +233,17 @@
     "date": "2026-05-13",
     "time": "11:30",
     "notes": "Because of H1B attempts "
+  },
+  {
+    "id": "entry_1779003253151_j17zd",
+    "company": "Experis IT (BOFA)",
+    "role": "Python Developer",
+    "recruiter": "Kimberly",
+    "status": "Interview Scheduled",
+    "stage": "Round 1",
+    "nextStep": "",
+    "date": "2026-05-19",
+    "time": "13:00",
+    "notes": "1:00 PM to 2:00 PM"
   }
 ]
