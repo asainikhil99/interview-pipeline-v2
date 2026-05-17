@@ -245,5 +245,17 @@
     "date": "2026-05-19",
     "time": "13:00",
     "notes": "1:00 PM to 2:00 PM"
+  },
+  {
+    "id": "entry_1779003537350_179we",
+    "company": "Block MB",
+    "role": "Senior AI/ML Engineer",
+    "recruiter": "Mus Ali",
+    "status": "Screen Scheduled",
+    "stage": "",
+    "nextStep": "",
+    "date": "2026-05-22",
+    "time": "21:45",
+    "notes": "15 min call "
   }
 ]
