@@ -389,5 +389,17 @@
     "date": "2026-07-01",
     "time": "10:00",
     "notes": ""
+  },
+  {
+    "id": "entry_1782875697424_5g7w2",
+    "company": "Goodwin Recruting",
+    "role": "Senior AI/ML Engineer",
+    "recruiter": "Scott Strong",
+    "status": "Screen Scheduled",
+    "stage": "",
+    "nextStep": "",
+    "date": "2026-07-02",
+    "time": "11:00",
+    "notes": ""
   }
 ]
