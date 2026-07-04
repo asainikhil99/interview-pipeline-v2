@@ -401,5 +401,17 @@
     "date": "2026-07-02",
     "time": "11:00",
     "notes": ""
+  },
+  {
+    "id": "entry_1783185433882_4wexw",
+    "company": "Customers Bank",
+    "role": "Enterprise AI Engineer",
+    "recruiter": "",
+    "status": "Screen Scheduled",
+    "stage": "",
+    "nextStep": "",
+    "date": "2026-07-07",
+    "time": "10:00",
+    "notes": ""
   }
 ]
